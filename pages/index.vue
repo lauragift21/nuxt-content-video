@@ -42,5 +42,9 @@
 export default {}
 </script>
 
-<style>
+<style scoped>
+section {
+  border: 10px solid #3cb2ac;
+  height: 100vh;
+}
 </style>
