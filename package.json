@@ -11,11 +11,14 @@
     "lint": "yarn lint:js"
   },
   "dependencies": {
+    "@nuxt/content": "^1.6.0",
+    "date-fns": "^2.15.0",
     "nuxt": "^2.14.0"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config": "^3.1.0",
     "@nuxtjs/eslint-module": "^2.0.0",
+    "@nuxtjs/tailwindcss": "^3.0.0",
     "babel-eslint": "^10.1.0",
     "eslint": "^7.5.0",
     "eslint-plugin-nuxt": "^1.0.0"

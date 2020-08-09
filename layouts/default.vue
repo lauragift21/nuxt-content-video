@@ -22,6 +22,8 @@ html {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
+  border: 10px solid #3cb2ac;
+  height: 100vh;
 }
 
 *,
