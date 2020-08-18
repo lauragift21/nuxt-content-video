@@ -21,10 +21,19 @@ export default {
       return format(new Date(), 'dd MMM yyyy')
     }
   },
-  async asyncData ({ $content, params }) {
-    const article = await $content('blog', params.slug).fetch()
+  async asyncData ({ $content, app, params }) {
+    let articles = await $content(app.i18n.defaultLocale, 'blog', params.slug).fetch()
+    if (app.i18n.defaultLocale !== app.i18n.locale) {
+      try {
+        const newArticles = await $content(app.i18n.locale, params.slug).fetch()
+        articles = articles.map((article) => {
+          const newArticle = newArticles.find(newArticle => newArticle.slug === article.slug)
+          return newArticle || article
+        })
+      } catch (err) {}
+    }
     return {
-      article
+      articles
     }
   }
 }

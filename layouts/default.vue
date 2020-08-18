@@ -1,5 +1,5 @@
 <template>
-  <div class="border">
+  <div class="box">
     <Header />
     <Nuxt />
   </div>
@@ -25,7 +25,7 @@ html {
   box-sizing: border-box;
 }
 
-.border {
+.box {
   border: 10px solid #3cb2ac;
   height: 100vh;
 }

@@ -28,6 +28,33 @@
           </li>
         </ul>
       </div>
+      <div class="left self-end">
+        <select class="lang-switch pl-2 py-3 bg-gray-200 pr-3 rounded font-medium border-l-8 border-gray-400" :value="$i18n.locale" @change="onChange">
+          <option
+            v-for="(locale, i) in $i18n.locales"
+            :key="i"
+            :value="locale.code"
+            class="text-2xl text-green"
+          >
+            <nuxt-link :to="switchLocalePath(locale.code)">
+              {{ locale.code }}
+            </nuxt-link>
+          </option>
+        </select>
+      </div>
     </div>
   </header>
 </template>
+
+<script>
+export default {
+  methods: {
+    onChange (event) {
+      const locale = this.$i18n.locales.find(
+        locale => locale.code === event.target.value
+      )
+      return locale
+    }
+  }
+}
+</script>
