@@ -85,6 +85,9 @@ export default {
     },
     defaultLocale: 'en',
     parsePages: false,
+    detectBrowserLanguage: {
+      useCookie: false
+    },
     seo: false,
     lazy: true,
     langDir: 'i18n/'

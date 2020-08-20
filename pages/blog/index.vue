@@ -22,11 +22,11 @@
               >
                 {{ article.description }}
               </p>
-              <a class="text-teal-500 inline-flex items-center mt-4">
-                <nuxt-link :to="`${article.slug}`">
+              <p class="text-teal-500 inline-flex items-center mt-4">
+                <nuxt-link :to="`${article.path}`">
                   {{ $t('blog.learn') }} ➚
                 </nuxt-link>
-              </a>
+              </p>
             </div>
           </div>
         </div>
@@ -60,7 +60,9 @@ export default {
           const newArticle = newArticles.find(newArticle => newArticle.slug === article.slug)
           return newArticle || article
         })
-      } catch (err) {}
+      } catch (error) {
+        return error({ statusCode: 404, message: 'Page not found' })
+      }
     }
     return {
       articles

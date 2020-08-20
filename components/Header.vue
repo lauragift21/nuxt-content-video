@@ -29,16 +29,18 @@
         </ul>
       </div>
       <div class="left self-end">
-        <select class="lang-switch pl-2 py-3 bg-gray-200 pr-3 rounded font-medium border-l-8 border-gray-400" :value="$i18n.locale" @change="onChange">
+        <select
+          class="lang-switch bg-gray-200 rounded font-medium px-3 py-2"
+          :value="$i18n.locale"
+          @change="onChange"
+        >
           <option
             v-for="(locale, i) in $i18n.locales"
             :key="i"
             :value="locale.code"
             class="text-2xl text-green"
           >
-            <nuxt-link :to="switchLocalePath(locale.code)">
-              {{ locale.code }}
-            </nuxt-link>
+            {{ locale.code }}
           </option>
         </select>
       </div>
@@ -53,7 +55,10 @@ export default {
       const locale = this.$i18n.locales.find(
         locale => locale.code === event.target.value
       )
-      return locale
+      // eslint-disable-next-line no-console
+      console.log(locale.code, this.$i18n)
+      // return locale.switchLocalePath
+      window.location = locale.code || ''
     }
   }
 }
