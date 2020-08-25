@@ -23,7 +23,7 @@
                 {{ article.description }}
               </p>
               <p class="text-teal-500 inline-flex items-center mt-4">
-                <nuxt-link :to="`${article.path}`">
+                <nuxt-link :to="article.path">
                   {{ $t('blog.learn') }} ➚
                 </nuxt-link>
               </p>
@@ -49,7 +49,7 @@ export default {
   },
   async asyncData ({ $content, app }) {
     let articles = await $content(app.i18n.defaultLocale, 'blog')
-      .sortBy('date', 'desc')
+      .sortBy('date', 'asc')
       .fetch()
     if (app.i18n.defaultLocale !== app.i18n.locale) {
       try {

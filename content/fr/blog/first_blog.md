@@ -9,6 +9,9 @@ Renforcez votre application NuxtJS avec le module `@ nuxtjs / content`: écrivez
 
 Apprenez à écrire votre `content /`, en prenant en charge Markdown, YAML, CSV et JSON: https://content.nuxtjs.org/writing.
 
+
+![alt](https://s3-eu-west-1.amazonaws.com/mhikes-prod-media/hikes/5e3c1b7639549/5e3c1b7639549.jpg)
+
 ## Récupération du contenu
 
 Apprenez à récupérer votre contenu avec `$ content`: https://content.nuxtjs.org/fetching.

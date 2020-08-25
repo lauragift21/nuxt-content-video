@@ -27,6 +27,6 @@ html {
 
 .box {
   border: 10px solid #3cb2ac;
-  height: 100vh;
+  min-height: 100vh;
 }
 </style>

@@ -86,7 +86,7 @@ export default {
     defaultLocale: 'en',
     parsePages: false,
     detectBrowserLanguage: {
-      useCookie: false
+      useCookie: true
     },
     seo: false,
     lazy: true,

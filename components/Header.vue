@@ -28,7 +28,7 @@
           </li>
         </ul>
       </div>
-      <div class="left self-end">
+      <!-- <div class="left self-end">
         <select
           class="lang-switch bg-gray-200 rounded font-medium px-3 py-2"
           :value="$i18n.locale"
@@ -43,7 +43,7 @@
             {{ locale.code }}
           </option>
         </select>
-      </div>
+      </div> -->
     </div>
   </header>
 </template>
@@ -55,9 +55,6 @@ export default {
       const locale = this.$i18n.locales.find(
         locale => locale.code === event.target.value
       )
-      // eslint-disable-next-line no-console
-      console.log(locale.code, this.$i18n)
-      // return locale.switchLocalePath
       window.location = locale.code || ''
     }
   }
