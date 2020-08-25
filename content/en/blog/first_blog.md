@@ -9,6 +9,9 @@ Empower your NuxtJS application with `@nuxtjs/content` module: write in a `conte
 
 Learn how to write your `content/`, supporting Markdown, YAML, CSV and JSON: https://content.nuxtjs.org/writing.
 
+![alt](https://s3-eu-west-1.amazonaws.com/mhikes-prod-media/hikes/5e3c1b7639549/5e3c1b7639549.jpg)
+
+
 ## Fetching content
 
 Learn how to fetch your content with `$content`: https://content.nuxtjs.org/fetching.
