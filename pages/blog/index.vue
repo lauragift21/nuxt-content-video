@@ -48,7 +48,7 @@ export default {
     }
   },
   async asyncData ({ $content, app }) {
-    let articles = await $content(app.i18n.defaultLocale, 'blog')
+    let articles = await $content(`blog/${app.i18n.defaultLocale}`)
       .sortBy('date', 'asc')
       .fetch()
     if (app.i18n.defaultLocale !== app.i18n.locale) {

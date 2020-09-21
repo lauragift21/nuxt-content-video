@@ -9,40 +9,25 @@ slug:
   encoding: "ascii"
   clean_accents: true
   sanitize_replacement: "_"
+i18n: 
+  structure: multiple_folders
+  locales: [en, es, fr]
 collections:
-  - name: 'en'
-    label: 'Blog_EN'
-    folder: 'content/en/blog'
+  - name: 'blog'
+    label: 'Blog'
+    folder: 'content/blog'
     create: true
+    i18n: true
     slug: '{{slug}}'
     editor:
       preview: false
     fields:
-      - { label: 'Title', name: 'title', widget: 'string' }
-      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
-      - { label: 'Description', name: 'description', widget: 'string' }
-      - { label: 'Body', name: 'body', widget: 'markdown' }
-  - name: 'fr'
-    label: 'Blog_FR'
-    folder: 'content/fr/blog'
-    create: true
-    slug: '{{slug}}'
-    editor:
-      preview: false
-    fields:
-      - { label: 'Title', name: 'title', widget: 'string' }
-      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
-      - { label: 'Description', name: 'description', widget: 'string' }
-      - { label: 'Body', name: 'body', widget: 'markdown' }
-  - name: 'es'
-    label: 'Blog_ES'
-    folder: 'content/es/blog'
-    create: true
-    slug: '{{slug}}'
-    editor:
-      preview: false
-    fields:
-      - { label: 'Title', name: 'title', widget: 'string' }
-      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
-      - { label: 'Description', name: 'description', widget: 'string' }
-      - { label: 'Body', name: 'body', widget: 'markdown' }
+      - label: Title
+        name: title 
+        widget: string 
+      - label: Description
+        name: description 
+        widget: string
+      - label: Body
+        name: body
+        widget: markdown 
