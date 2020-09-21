@@ -11,7 +11,7 @@ slug:
   sanitize_replacement: "_"
 collections:
   - name: 'en'
-    label: 'Blog-en'
+    label: 'Blog_EN'
     folder: 'content/en/blog'
     create: true
     slug: '{{slug}}'
@@ -23,7 +23,7 @@ collections:
       - { label: 'Description', name: 'description', widget: 'string' }
       - { label: 'Body', name: 'body', widget: 'markdown' }
   - name: 'fr'
-    label: 'Blog-fr'
+    label: 'Blog_FR'
     folder: 'content/fr/blog'
     create: true
     slug: '{{slug}}'
@@ -35,7 +35,7 @@ collections:
       - { label: 'Description', name: 'description', widget: 'string' }
       - { label: 'Body', name: 'body', widget: 'markdown' }
   - name: 'es'
-    label: 'Blog-es'
+    label: 'Blog_ES'
     folder: 'content/es/blog'
     create: true
     slug: '{{slug}}'
