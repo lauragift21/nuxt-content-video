@@ -1,6 +1,10 @@
 ---
-title: Commencer
-description: 'Renforcez votre application NuxtJS avec le module @ nuxt / content: écrivez dans un répertoire content / et récupérez vos fichiers Markdown, JSON, YAML et CSV via une API similaire à MongoDB, agissant comme un CMS Headless basé sur Git.'
+title: Commencer Article
+date: 2020-09-21T11:51:59.091Z
+description: "Renforcez votre application NuxtJS avec le module @ nuxt /
+  content: écrivez dans un répertoire content / et récupérez vos fichiers
+  Markdown, JSON, YAML et CSV via une API similaire à MongoDB, agissant comme un
+  CMS Headless basé sur Git."
 ---
 
 Renforcez votre application NuxtJS avec le module `@ nuxtjs / content`: écrivez dans un répertoire` content / `et récupérez vos fichiers Markdown, JSON, YAML et CSV via une API similaire à MongoDB, agissant comme un ** CMS Headless basé sur Git ** .
