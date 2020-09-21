@@ -1,9 +1,12 @@
 ---
 title: Empezando
-description: 'Potencie su aplicación NuxtJS con el módulo @ nuxt / content: escriba en un directorio de contenido / y obtenga sus archivos Markdown, JSON, YAML y CSV a través de una API tipo MongoDB, actuando como un CMS sin cabeza basado en Git.'
+date: 2020-09-21T11:53:22.079Z
+description: "Potencie su aplicación NuxtJS con el módulo @ nuxt / content:
+  escriba en un directorio de contenido / y obtenga sus archivos Markdown, JSON,
+  YAML y CSV a través de una API tipo MongoDB, actuando como un CMS sin cabeza
+  basado en Git."
 ---
-
-Potencie su aplicación NuxtJS con el módulo `@ nuxtjs / content`: escriba en un directorio` content / `y obtenga sus archivos Markdown, JSON, YAML y CSV a través de una API tipo MongoDB, actuando como un ** CMS sin cabeza basado en Git ** .
+Potencie su aplicación NuxtJS con el módulo `@ nuxtjs / content`: escriba en un directorio`content /`y obtenga sus archivos Markdown, JSON, YAML y CSV a través de una API tipo MongoDB, actuando como un  **CMS sin cabeza basado en Git**.
 
 ## Escribir contenido
 
