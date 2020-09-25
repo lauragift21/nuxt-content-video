@@ -1,5 +1,5 @@
 ---
-title: Commencer Article
+title: Le debùt de la fin
 date: 2020-09-21T11:51:59.091Z
 description: "Renforcez votre application NuxtJS avec le module @ nuxt /
   content: écrivez dans un répertoire content / et récupérez vos fichiers
