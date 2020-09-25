@@ -7,8 +7,8 @@
       </p>
     </header>
     <nuxt-content :document="article" class="w-3/4 mx-auto py-6" />
-    <nuxt-link to="/blog" class="underline text-lg">
-      Blog Home
+    <nuxt-link to="/blog" class="text-xl ml-64 font-bold">
+      🔙  Go Back
     </nuxt-link>
   </article>
 </template>
@@ -46,19 +46,22 @@ export default {
 </script>
 
 <style>
+.nuxt-content {
+  width: 700px;
+}
 .nuxt-content h2 {
   font-weight: bold;
   font-size: 20px;
   margin-top: 15px;
 }
 .nuxt-content p {
-  margin-top: 10px;
+  margin-top: 5px;
 }
-.icon.icon-link {
+/* .icon.icon-link {
   background-image: url("~assets/hashtag.svg");
   display: inline-block;
   width: 20px;
   height: 20px;
   background-size: 20px 20px;
-}
+} */
 </style>

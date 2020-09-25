@@ -83,10 +83,12 @@ export default {
     vuei18n: {
       fallbackLocale: 'en'
     },
+    strategy: 'prefix_except_default',
     defaultLocale: 'en',
     parsePages: false,
     detectBrowserLanguage: {
-      useCookie: true
+      useCookie: true,
+      cookieKey: 'i18n_redirected'
     },
     seo: false,
     lazy: true,

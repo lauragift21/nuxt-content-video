@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   home: {
     heading: 'Integración de Nuxt Content + I18N',
     subtitle: 'Taza de cobre try-hard pitchfork pour-over freegan heirloom neutra air plant tacos prensados en frío poke beard tote bag. Heirloom echo park mlkshk bolsa de asas orillo pollo caliente auténtica tumeric truffaut hexagonal try-hard cambray.',

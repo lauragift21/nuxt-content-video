@@ -23,7 +23,7 @@
                 {{ article.description }}
               </p>
               <p class="text-teal-500 inline-flex items-center mt-4">
-                <nuxt-link :to="article.path">
+                <nuxt-link :to="`blog/${article.slug}`">
                   {{ $t('blog.learn') }} ➚
                 </nuxt-link>
               </p>
