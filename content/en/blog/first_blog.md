@@ -1,5 +1,5 @@
 ---
-title: Getting started
+title: The Beginning of the end
 date: 2020-09-20T22:25:24.197Z
 description: "Empower your NuxtJS application with @nuxt/content module: write
   in a content/ directory and fetch your Markdown, JSON, YAML and CSV files
