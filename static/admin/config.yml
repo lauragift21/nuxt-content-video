@@ -10,7 +10,7 @@ slug:
   clean_accents: true
   sanitize_replacement: "_"
 collections:
-  - name: 'en'
+  - name: 'blog-en'
     label: 'Blog-en'
     folder: 'content/en/blog'
     create: true
@@ -22,7 +22,7 @@ collections:
       - { label: 'Publish Date', name: 'date', widget: 'datetime' }
       - { label: 'Description', name: 'description', widget: 'string' }
       - { label: 'Body', name: 'body', widget: 'markdown' }
-  - name: 'fr'
+  - name: 'blog-fr'
     label: 'Blog-fr'
     folder: 'content/fr/blog'
     create: true
@@ -34,7 +34,7 @@ collections:
       - { label: 'Publish Date', name: 'date', widget: 'datetime' }
       - { label: 'Description', name: 'description', widget: 'string' }
       - { label: 'Body', name: 'body', widget: 'markdown' }
-  - name: 'es'
+  - name: 'blog-es'
     label: 'Blog-es'
     folder: 'content/es/blog'
     create: true
@@ -46,3 +46,46 @@ collections:
       - { label: 'Publish Date', name: 'date', widget: 'datetime' }
       - { label: 'Description', name: 'description', widget: 'string' }
       - { label: 'Body', name: 'body', widget: 'markdown' }
+  - name: 'en'
+    label: 'pages-en'
+    folder: 'content/en'
+    create: true
+    slug: {{slug}}
+    editor: 
+      preview: false
+    fields:
+      - { label: 'Heading', name: 'title', widget: 'string' }
+      - { label: 'Subtitle', name: 'subtitle', widget: 'string' }
+      - { label: 'image', name: 'image', widget: 'string' }
+      - { label: 'homeText', name: 'homeText', widget: 'string' }
+      - { label: 'blogLabel', name: 'blogLabel', widget: 'string' }
+      - { label: 'Body', name: 'body', widget: 'markdown', options: { modes: ['raw']} }
+  - name: 'es'
+    label: 'pages-es'
+    folder: 'content/es'
+    create: true
+    slug: {{slug}}
+    editor: 
+      preview: false
+    fields:
+      - { label: 'Heading', name: 'title', widget: 'string' }
+      - { label: 'Subtitle', name: 'subtitle', widget: 'string' }
+      - { label: 'image', name: 'image', widget: 'string' }
+      - { label: 'homeText', name: 'homeText', widget: 'string' }
+      - { label: 'blogLabel', name: 'blogLabel', widget: 'string' }
+      - { label: 'Body', name: 'body', widget: 'markdown', options: { modes: ['raw']} }
+  - name: 'fr'
+    label: 'pages-fr'
+    folder: 'content/fr'
+    create: true
+    slug: {{slug}}
+    editor: 
+      preview: false
+    fields:
+      - { label: 'Heading', name: 'title', widget: 'string' }
+      - { label: 'Subtitle', name: 'subtitle', widget: 'string' }
+      - { label: 'image', name: 'image', widget: 'string' }
+      - { label: 'homeText', name: 'homeText', widget: 'string' }
+      - { label: 'blogLabel', name: 'blogLabel', widget: 'string' }
+      - { label: 'Body', name: 'body', widget: 'markdown', modes: ['raw'] }
+  

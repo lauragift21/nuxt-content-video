@@ -11,7 +11,7 @@
     "lint": "yarn lint:js"
   },
   "dependencies": {
-    "@nuxt/content": "^1.6.0",
+    "@nuxt/content": "^1.9.0",
     "date-fns": "^2.15.0",
     "nuxt": "^2.14.0",
     "nuxt-i18n": "^6.13.9"

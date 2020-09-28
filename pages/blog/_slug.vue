@@ -8,7 +8,7 @@
     </header>
     <nuxt-content :document="article" class="w-3/4 mx-auto py-6" />
     <nuxt-link to="/blog" class="text-xl ml-64 font-bold">
-      🔙  Go Back
+      🔙 Go Back
     </nuxt-link>
   </article>
 </template>
@@ -25,17 +25,15 @@ export default {
     const { slug } = params
     let article
     try {
-      article = await $content(`${app.i18n.defaultLocale}/blog`, slug).fetch()
+      article = await $content(`${app.i18n.locale}/blog`, slug).fetch()
     } catch (error) {
-      return error({ statusCode: 404, message: 'Page not found' })
-    }
-
-    if (app.i18n.defaultLocale !== app.i18n.locale) {
       try {
-        article = await $content(`${app.i18n.locale}/blog`, slug).fetch()
+        article = await $content(
+          `${app.i18n.defaultLocale}/blog`,
+          slug
+        ).fetch()
       } catch (error) {
-        // eslint-disable-next-line no-unused-expressions
-        `/${app.i18n.defaultLocale}/blog`
+        return error({ statusCode: 404, message: 'Page not found' })
       }
     }
     return {
