@@ -48,15 +48,13 @@ collections:
       - { label: 'Body', name: 'body', widget: 'markdown' }
   - name: 'en'
     label: 'pages-en'
-    folder: 'content/en'
+    folder: 'content/en/pages'
     create: true
     slug: '{{slug}}'
     editor: 
       preview: false
-    identifier_field: id
     fields:
       - { label: 'Title', name: 'title', widget: 'string' }
-      - { label: 'ID', name: 'id', widget: 'string' }
       - { label: 'Subtitle', name: 'subtitle', widget: 'string' }
       - { label: 'image', name: 'image', widget: 'string' }
       - { label: 'homeText', name: 'homeText', widget: 'string' }
@@ -64,15 +62,13 @@ collections:
       - { label: 'Body', name: 'body', widget: 'markdown', modes: ['raw'] }
   - name: 'es'
     label: 'pages-es'
-    folder: 'content/es'
+    folder: 'content/es/pages'
     create: true
     slug: '{{slug}}'
     editor: 
       preview: false
-    identifier_field: id
     fields:
       - { label: 'Title', name: 'title', widget: 'string' }
-      - { label: 'ID', name: 'id', widget: 'string' }
       - { label: 'Subtitle', name: 'subtitle', widget: 'string' }
       - { label: 'image', name: 'image', widget: 'string' }
       - { label: 'homeText', name: 'homeText', widget: 'string' }
@@ -80,15 +76,13 @@ collections:
       - { label: 'Body', name: 'body', widget: 'markdown', modes: ['raw'] }
   - name: 'fr'
     label: 'pages-fr'
-    folder: 'content/fr'
+    folder: 'content/fr/pages'
     create: true
     slug: '{{slug}}'
     editor: 
       preview: false
-    identifier_field: id
     fields:
       - { label: 'Title', name: 'title', widget: 'string' }
-      - { label: 'ID', name: 'id', widget: 'string' }
       - { label: 'Subtitle', name: 'subtitle', widget: 'string' }
       - { label: 'image', name: 'image', widget: 'string' }
       - { label: 'homeText', name: 'homeText', widget: 'string' }
