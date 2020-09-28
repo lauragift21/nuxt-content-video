@@ -50,7 +50,7 @@ collections:
     label: 'pages-en'
     folder: 'content/en'
     create: true
-    slug: {{slug}}
+    slug: '{{slug}}'
     editor: 
       preview: false
     fields:
@@ -64,7 +64,7 @@ collections:
     label: 'pages-es'
     folder: 'content/es'
     create: true
-    slug: {{slug}}
+    slug: '{{slug}}'
     editor: 
       preview: false
     fields:
@@ -78,7 +78,7 @@ collections:
     label: 'pages-fr'
     folder: 'content/fr'
     create: true
-    slug: {{slug}}
+    slug: '{{slug}}'
     editor: 
       preview: false
     fields:
