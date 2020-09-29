@@ -6,4 +6,4 @@ homeText: 'Accueil'
 blogLabel: 'Blog'
 ---
 
-<home-cover :heading="heading" :subtitle="subtitle" :image="image" :home-text="homeText" :blog-label="blogLabel"></home-cover>
+<home-cover :title="title" :subtitle="subtitle" :image="image" :home-text="homeText" :blog-label="blogLabel"></home-cover>

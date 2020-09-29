@@ -8,7 +8,7 @@
       <h1
         class="title-font sm:text-5xl text-5xl mb-4 font-medium text-gray-900"
       >
-        {{ heading }}
+        {{ title }}
       </h1>
       <p class="mb-8 leading-relaxed">
         {{ subtitle }}
@@ -16,8 +16,9 @@
       <div class="flex justify-center">
         <button
           class="inline-flex text-white bg-teal-500 border-0 py-2 px-6 focus:outline-none hover:bg-teal-600 rounded text-lg"
-          v-html="homeText"
-        />
+        >
+          {{ homeText }}
+        </button>
         <button
           class="ml-4 inline-flex text-gray-700 bg-gray-200 border-0 py-2 px-6 focus:outline-none hover:bg-gray-300 rounded text-lg"
         >
@@ -35,6 +36,28 @@
 
 <script>
 export default {
-  props: ['heading', 'subtitle', 'image', 'homeText', 'blogLabel']
+  props: {
+    title: {
+      type: String,
+      default: ''
+    },
+    subtitle: {
+      type: String,
+      default: ''
+
+    },
+    image: {
+      type: String,
+      default: ''
+    },
+    homeText: {
+      type: String,
+      default: ''
+    },
+    blogLabel: {
+      type: String,
+      default: ''
+    }
+  }
 }
 </script>
