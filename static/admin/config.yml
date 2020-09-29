@@ -10,6 +10,16 @@ slug:
   clean_accents: true
   sanitize_replacement: "_"
 collections:
+  - name: 'example'
+    label: 'example'
+    folder: 'content/example'
+    create: false
+    slug: '{{slug}}'
+    editor:
+      preview: false
+    fields: 
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Body', name: 'body', widget: 'markdown' }
   - name: 'blog-en'
     label: 'Blog-en'
     folder: 'content/en/blog'
