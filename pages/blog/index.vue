@@ -48,18 +48,16 @@ export default {
     }
   },
   async asyncData ({ $content, app }) {
-    let articles = await $content(app.i18n.defaultLocale, 'blog')
-      .sortBy('date', 'asc')
-      .fetch()
-    if (app.i18n.defaultLocale !== app.i18n.locale) {
+    let articles
+    try {
+      articles = await $content(`${app.i18n.locale}/blog`)
+        .sortBy('date', 'asc')
+        .fetch()
+    } catch (error) {
       try {
-        const newArticles = await $content(app.i18n.locale, 'blog')
+        articles = await $content(`${app.i18n.defaultLocale}/blog`)
           .sortBy('date', 'desc')
           .fetch()
-        articles = articles.map((article) => {
-          const newArticle = newArticles.find(newArticle => newArticle.slug === article.slug)
-          return newArticle || article
-        })
       } catch (error) {
         return error({ statusCode: 404, message: 'Page not found' })
       }
