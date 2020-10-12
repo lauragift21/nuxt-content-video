@@ -13,6 +13,8 @@ jobs:
       uses: appleboy/ssh-action@master
       env:
         DEV: development
+        CI_EMAIL: "passionatebot@passionatepeople.io"
+        CI_USERNAME: ""
       with:
         host: ${{ secrets.HOST }}
         username: ${{ secrets.USERNAME }}
@@ -24,7 +26,8 @@ jobs:
           echo $DEV
           cd www/nuxt-content-video
           ls -al
-          git pull
           git fetch && git checkout master
+          git pull
+          npm install
           npm run build
 
