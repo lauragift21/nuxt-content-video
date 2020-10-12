@@ -22,5 +22,4 @@ jobs:
         script: |
           whoami
           echo $DEV
-      run: 
           
