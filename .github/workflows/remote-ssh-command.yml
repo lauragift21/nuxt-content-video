@@ -27,6 +27,6 @@ jobs:
           git pull origin master
           git fetch && git checkout master
           npm install
-          npm run build & npm start
+          npm run build
 
 
