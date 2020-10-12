@@ -22,5 +22,8 @@ jobs:
         script: |
           whoami
           echo $DEV
+          cd www/nuxt-content-video
           ls -al
-          
+          git fetch && git checkout master
+          npm run build
+
