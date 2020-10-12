@@ -24,7 +24,8 @@ jobs:
           echo $DEV
           cd www/nuxt-content-video
           ls -al
-          git fetch && git checkout master
           git pull
-          npm run build
+          git fetch && git checkout master
+          npm install
+          npm run build & npm start
 
