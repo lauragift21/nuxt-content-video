@@ -22,5 +22,5 @@ jobs:
         script: |
           whoami
           echo $DEV
-          ls -la
+          ls -al
           
