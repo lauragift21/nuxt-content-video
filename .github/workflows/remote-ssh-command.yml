@@ -19,13 +19,13 @@ jobs:
         username: ${{ secrets.USERNAME }}
         key: ${{ secrets.KEY }}
         port: ${{ secrets.PORT }}
-        envs: DEV
+        envs: DEV, TEST, PROD
         script: |
           whoami
           echo $DEV
           echo $TEST
           echo $PROD
-          cd www/nuxt-content-video
+          cd www/{}/nuxt-content-video
           ls -al
           git pull origin master
           git fetch && git checkout master
