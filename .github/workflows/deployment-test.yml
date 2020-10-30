@@ -30,6 +30,6 @@ jobs:
           cd www/nuxt-content-video-test
           ls -al
           git fetch 
-          git switch -C $(echo ${{ github.ref }} | sed 's/refs\/(heads|tags)\///g')
+          git switch -C $(echo ${{ github.ref }} | sed -r 's/refs\/(heads|tags)\///g')
           npm install
           npm run build
