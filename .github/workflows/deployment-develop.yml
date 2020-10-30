@@ -1,4 +1,4 @@
-name: remote ssh command
+name: Deployment Develop
 on:
   push:
     branches:
@@ -8,24 +8,16 @@ jobs:
     name: Build
     runs-on: ubuntu-latest
     steps:
-    - name: executing remote ssh commands using ssh key
+    - name: executing commands in remote server
       uses: appleboy/ssh-action@master
-      env:
-        DEV: development
-        TEST: test
-        PROD: production
       with:
         host: ${{ secrets.HOST }}
         username: ${{ secrets.USERNAME }}
         key: ${{ secrets.KEY }}
         port: ${{ secrets.PORT }}
-        envs: DEV, TEST, PROD
         script: |
           whoami
-          echo $DEV
-          echo $TEST
-          echo $PROD
-          cd www/nuxt-content-video
+          cd www/nuxt-content-video 
           ls -al
           git pull origin master
           git fetch && git checkout master

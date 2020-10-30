@@ -1,0 +1,35 @@
+name: Deployment Test
+on: 
+  workflow_dispatch:
+    inputs:
+      git-ref:
+        description: Git Ref (Optional)    
+        required: false
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+    - name: Clone Repository (Latest)
+      uses: actions/checkout@v2
+      if: github.event.inputs.git-ref == ''
+    - name: Clone Repository (Custom Ref)
+      uses: actions/checkout@v2
+      if: github.event.inputs.git-ref != ''
+      with:
+        ref: ${{ github.event.inputs.git-ref }}
+    - name: executing commands in remote server
+      uses: appleboy/ssh-action@master
+      with:
+        host: ${{ secrets.HOST }}
+        username: ${{ secrets.USERNAME }}
+        key: ${{ secrets.KEY }}
+        port: ${{ secrets.PORT }}
+        script: |
+          whoami
+          cd www/nuxt-content-video-test
+          ls -al
+          git pull origin master
+          git fetch && git checkout master
+          npm install
+          npm run build
