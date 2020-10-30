@@ -1,5 +1,5 @@
 ---
-title: This is a demo of Nuxt Content Module
+title: This is a Test
 ---
 
 ### This is a demo app showing how Nuxt Content works with Netlify CMS and this document
