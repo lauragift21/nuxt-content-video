@@ -19,7 +19,7 @@ jobs:
           whoami
           cd www/nuxt-content-video 
           ls -al
-          git pull origin master
           git fetch && git checkout master
+          git pull origin master
           npm install
           npm run build
