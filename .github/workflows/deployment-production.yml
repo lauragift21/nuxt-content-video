@@ -28,9 +28,9 @@ jobs:
         script: |
           whoami
           cd www/nuxt-content-video-production
-          ls -al
-          echo ${{ github.event.inputs.git-ref || github.ref }}
+          ls -al 
+          git checkout -b master  
+          git branch -D ${{ github.ref }}
           git fetch && git checkout -b ${{ github.ref }}
-          git pull origin ${{ github.ref }}
           npm install
           npm run build
