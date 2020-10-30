@@ -30,7 +30,7 @@ jobs:
           cd www/nuxt-content-video-test
           ls -al
           echo ${{ github.event.inputs.git-ref || github.ref }}
-          git fetch && git checkout ${{ github.ref }}
+          git fetch && git checkout -b ${{ github.ref }}
           git pull origin ${{ github.ref }}
           npm install
           npm run build
