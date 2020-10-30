@@ -29,7 +29,8 @@ jobs:
           whoami
           cd www/nuxt-content-video-production
           ls -al
-          git pull origin master
-          git fetch && git checkout master
+          echo ${{ github.event.inputs.git-ref || github.ref }}
+          git pull origin ${{ github.ref }}
+          git fetch && git checkout ${{ github.ref }}
           npm install
           npm run build
