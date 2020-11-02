@@ -29,7 +29,25 @@ jobs:
           whoami
           cd www/nuxt-content-video-production
           ls -al 
+    - name: executing git commands
+      uses: appleboy/ssh-action@master
+      with:
+        host: ${{ secrets.HOST }}
+        username: ${{ secrets.USERNAME }}
+        key: ${{ secrets.KEY }}
+        port: ${{ secrets.PORT }}
+        script: |
+          cd www/nuxt-content-video-production
           git fetch 
           git switch -C $(echo ${{ github.ref }} | sed -r 's/refs\/(heads|tags)\///g') $(echo ${{ github.ref }} | sed -r 's/refs\/(heads|tags)/origin/g')
+    - name: executing npm commands
+      uses: appleboy/ssh-action@master
+      with:
+        host: ${{ secrets.HOST }}
+        username: ${{ secrets.USERNAME }}
+        key: ${{ secrets.KEY }}
+        port: ${{ secrets.PORT }}
+        script: |
+          cd www/nuxt-content-video-production
           npm install
           npm run build
