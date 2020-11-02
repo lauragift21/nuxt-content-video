@@ -33,3 +33,25 @@ jobs:
           git switch -C $(echo ${{ github.ref }} | sed -r 's/refs\/(heads|tags)\///g') $(echo ${{ github.ref }} | sed -r 's/refs\/(heads|tags)/origin/g')
           npm install
           npm run build
+       with:
+        host: ${{ secrets.HOST }}
+        username: ${{ secrets.USERNAME }}
+        key: ${{ secrets.KEY }}
+        port: ${{ secrets.PORT }}
+        script: |
+          whoami
+          cd www/nuxt-content-video-production
+          ls -al 
+    steps:
+      - name: Run Git command
+        with:
+          script: |
+            cd www/nuxt-content-video-production
+            git fetch 
+            git switch -C $(echo ${{ github.ref }} | sed -r 's/refs\/(heads|tags)\///g') $(echo ${{ github.ref }} | sed -r 's/refs\/(heads|tags)/origin/g')
+    steps:
+      - name: Run npm command
+        with:
+          script: |
+            npm install
+            npm run build

@@ -29,7 +29,16 @@ jobs:
           whoami
           cd www/nuxt-content-video-production
           ls -al 
-          git fetch 
-          git switch -C $(echo ${{ github.ref }} | sed -r 's/refs\/(heads|tags)\///g') $(echo ${{ github.ref }} | sed -r 's/refs\/(heads|tags)/origin/g')
-          npm install
-          npm run build
+    steps:
+      - name: Run Git command
+        with:
+          script: |
+            cd www/nuxt-content-video-production
+            git fetch 
+            git switch -C $(echo ${{ github.ref }} | sed -r 's/refs\/(heads|tags)\///g') $(echo ${{ github.ref }} | sed -r 's/refs\/(heads|tags)/origin/g')
+    steps:
+      - name: Run npm command
+        with:
+          script: |
+            npm install
+            npm run build
