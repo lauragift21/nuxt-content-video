@@ -43,11 +43,12 @@ jobs:
           cd www/nuxt-content-video-production
           ls -al 
     - name: Run Git Command
-      run: |
-        cd www/nuxt-content-video-production
+      with:
+        script: |
         git fetch 
         git switch -C $(echo ${{ github.ref }} | sed -r 's/refs\/(heads|tags)\///g') $(echo ${{ github.ref }} | sed -r 's/refs\/(heads|tags)/origin/g')
     - name: Run NPM Command
-      run: |
+      with:
+        script: |
         npm install
         npm run build
